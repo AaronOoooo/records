@@ -1,0 +1,14 @@
+$border-color: solid purple;
+
+$highlight: yellow;
+
+h1 {
+  border: $border-color 5px;
+}
+
+h3 {
+  font-family: "Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+  background-color: $highlight;
+}
+
+

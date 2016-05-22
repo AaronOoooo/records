@@ -1,10 +1,12 @@
 <h1>Record Collection</h1>
 
 <h2><% @records.each do  | record |%></h2>
-<h3 class='highlight'>Artist: <%= record.artist %></h3>
+<h3 class='highlight'> Artist: <a href="/show/<%= record.id %>"><%= record.artist %></a></h3>
 <p>Title: <%= record.cd_title %></p>
 <p>Year: <%= record.year %></p>
 <p>Record label: <%= record.record_label %></p>
 <p>Cost: <%= record.cost %></p>
 <p>Image: <%= record.image %></p>
 <% end %>
+
+

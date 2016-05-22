@@ -31,6 +31,24 @@ class RecordsController < ApplicationController
     @record = Record.first
   end
 
+  def edit
+    @record = Record.find_by(id: params[:id])
+  end
+
+  def update
+    @record = Record.find_by(id: params[:id])
+
+    @record.update(
+      artist: params[:artist],
+      cd_title: params[:cd_title],
+      year: params[:year],
+      record_label: params[:record_label],
+      cost: params[:cost]
+    )
+
+    render 'show.html.erb'
+  end
+
   def query
     @message = params[:message]
     @second_message = params[:ice_cream].upcase

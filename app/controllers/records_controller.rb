@@ -63,6 +63,14 @@ class RecordsController < ApplicationController
     end
   end
 
+  def destroy
+    @record = Record.find(params[:id])
+    @record.destroy
+
+    redirect_to '/'
+  end
+
+
   def url
     @message = params[:penguins]
   end

@@ -1,0 +1,35 @@
+<h1>Please fill in our form to make a new record entry.</h1>
+
+<%= form_tag '/records', method: :post do %>
+<div>
+  <%= label_tag :artist %>
+  <%= text_field_tag :artist %>
+</div>
+
+<div>
+  <%= label_tag :cd_title %>
+  <%= text_field_tag :cd_title %>
+</div>
+
+<div>
+  <%= label_tag :year %>
+  <%= text_field_tag :year %>
+</div>
+
+<div>
+  <%= label_tag :record_label %>
+  <%= text_field_tag :record_label %>
+</div>
+
+<div>
+  <%= label_tag :cost %>
+  <%= text_field_tag :cost %>
+</div>
+
+<div>
+  <%= label_tag :image %>
+  <%= text_field_tag :image %>
+</div>
+
+<%= submit_tag 'Add new record' %>
+<% end %>
